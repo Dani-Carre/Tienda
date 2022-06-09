@@ -6,4 +6,73 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     Created on : 26 may. 2022, 18:26:00
     Author     : Daniela
 */
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Shadows Into Light', cursive;
+}
 
+.container{
+    height: 120vh;
+    width: 100%;
+    background-image: url(../images/background.png);
+    background-position: center;
+    background-size: cover;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.navbar{
+    height: 15vh;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+/*
+*/
+.logo{
+    width: 160px;
+    cursor: pointer;
+}  
+/*
+A todas las etiquetas nav se les va a asignar este estilo (esto al nav que no lleva punto de primero)
+flex1 que tanto va a crecer nuestro elemto
+*/
+nav{
+    flex: 1;
+    padding-left: 60px;
+}
+
+nav ul li{
+    display: inline-block;/*que se vea en una misma linea*/
+    list-style: none;/*no quiere dar ningún estilo, elimina viñetas*/
+    margin: 0px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;/*elimina el subrayado que tiene el link*/
+    color:darkviolet;/*agrega color al navbar*/
+}
+
+.content h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 24px;
+    margin-bottom: 15px;
+    color:darkviolet;/*agrega color al heading*/
+}
+
+.content p {
+    font-size: 20px;
+    color:violet;/*cambia el color a la letra del parrafo*/
+}
+.miImagen {
+    height: 50%;
+    position: absolute;
+    bottom: 50px;
+    right: 160px;
+}
