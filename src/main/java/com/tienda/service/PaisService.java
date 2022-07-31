@@ -15,14 +15,14 @@ import org.springframework.stereotype.Service;
  * @author Daniela
  */
 @Service
-public class PaisService implements IPaisService{
+public class PaisService implements IPaisService{ //Hacemos lo mismo que en PersonaService, implementamos los métodos que creamos en IPaisService
 
     @Autowired
     private PaisRepository paisRepository;
     
     @Override
     public List<Pais> ListCountry() {
-        return (List<Pais>)paisRepository.findAll();
+        return (List<Pais>)paisRepository.findAll(); //Nos devuelve una lista de objetos de tipo País.
     }
     
 }

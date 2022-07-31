@@ -12,6 +12,6 @@ import java.util.List;
  * @author Daniela
  */
 public interface IPaisService {
-    public List<Pais> ListCountry();
+    public List<Pais> ListCountry(); //En este solo creamos un método para obtener toda la lista de países
     
 }

@@ -15,8 +15,8 @@ import javax.persistence.Table;
  *
  * @author Daniela
  */
-@Entity
-@Table(name="paises")
+@Entity //Definimos que es una entidad
+@Table(name="paises") //Que vamos a modelar lo de la tabla de países
 public class Pais implements Serializable {
     
     @Id
@@ -28,8 +28,8 @@ public class Pais implements Serializable {
         return id;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setId(long id) { //este es un parámetro: nombramos los parámetros que requerimos para ejecutar el método 
+        this.id = id; //el argumento es el valor 
     }
 
     public String getPais() {
