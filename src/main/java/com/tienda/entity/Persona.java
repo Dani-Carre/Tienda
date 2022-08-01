@@ -5,6 +5,9 @@
 package com.tienda.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -33,6 +36,49 @@ public class Persona implements Serializable {
     private String apellido2;
     private String telefono;
     private String email;
+    
+    //Agregar Getter and setter
+    private String password;
+    private int active;
+    private String roles = ""; //Estos son los primeros que estamos instanciando como si fuesen vacios
+    private String permissions = ""; //Estos son los primeros que estamos instanciando como si fuesen vacios
+    
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public int getActive() {
+        return active;
+    }
+
+    public void setActive(int active) {
+        this.active = active;
+    }
+
+    public String getRoles() {
+        return roles;
+    }
+
+    public void setRoles(String roles) {
+        this.roles = roles;
+    }
+
+    public String getPermissions() {
+        return permissions;
+    }
+
+    //Esto es de los nuevos campos que agregamos en la tabla persona en la "semana 10"
+    public void setPermissions(String permissions) {
+        this.permissions = permissions;
+    }
+    
+    //Agregamos los siguientes métodos
+    //Lo que queremos es retornar una lista de permisos o roles, ya que en teoría un usuario puede tener varios permisos y varios roles.
+    //Ejm un usuario puede ser administrador y usuario. Esto con el fin de hacer pruebas.            
     
     //Hay que modelar el foreign Key
     @ManyToOne //Hay que definir cual es la relación, en este caso es de muchos a uno.
@@ -95,10 +141,20 @@ public class Persona implements Serializable {
 
     public void setPais(Pais pais) {
         this.pais = pais;
+    }  
+    
+    public List<String> getRoleList() {
+        if (this.roles.length() > 0) {
+            return Arrays.asList(this.roles.split(","));
+        }
+        return new ArrayList<>();
     }
     
- 
-            
-            
+    public List<String> getPermissionList() {
+        if (this.permissions.length() > 0) {
+            return Arrays.asList(this.permissions.split(","));
+        }
+        return new ArrayList<>();
+    }
     
 }

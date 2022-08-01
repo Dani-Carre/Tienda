@@ -26,7 +26,7 @@ public class WebConfig implements WebMvcConfigurer { //implementa los métodos d
     @Bean //Estamos inyectando dependencias pero de configuración, de lo que debe de hacer nuestro programa cuando se está ejecutando
     public SessionLocaleResolver localeResolver() {
         var slr = new SessionLocaleResolver(); //Esto crea un objeto que agrega a esa variable
-        slr.setDefaultLocale(new Locale("en")); //tiene un método que se llama setDefaultLocale que le está seteando un objeto de tipo locale
+        slr.setDefaultLocale(new Locale("es")); //tiene un método que se llama setDefaultLocale que le está seteando un objeto de tipo locale
         //el objeto de tipo locale lo que indica es el dialecto, idioma, la posición geográfica y toda la información referente al idioma en el que se quiere configurar nuestra página web.
         //la información se va a guardar en un objeto que se llama SessionLocaleResolver (Es como el nodo)
         return slr; //

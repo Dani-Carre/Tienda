@@ -20,4 +20,16 @@ ver si existe por un ID, hacer conteos, eliminar, etc.*/
 public interface PersonaRepository extends CrudRepository<Persona,Long>{ //Aquí definimos el tipo de objeto que se va a utilizar.
     //En este caso es un objeto de tipo persona, y el tipo de ID que sería Long.
     
+    //Queremos buscar a un usuario por el user name, por lo que creamos un método que nos encuentre por el nombre, pasandole el nombre. 
+    Persona findByNombre (String nombre); //se le pone el nombre de la columna que queremos consultar.
+    
+    /*
+    Podemos incrustar queries directamente en el código si quisieramos ejemplo:
+    (Investigar más)
+    
+     'SELECT * FROM A'
+            INNER JOIN B ON A.ID=B.ID
+                WHERE ASDASD'
+    */
+    
 }

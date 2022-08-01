@@ -47,4 +47,9 @@ public class PersonaService implements IPersonaService{ //Implementamos lo que t
         personaRepository.deleteById(id); //Pasamos el ID y elimnamos una fila de nuestra tabla, de acuerdo al ID. 
     }
     
+    @Override
+    public Persona findByNombre(String nombre) {
+        return personaRepository.findByNombre(nombre);
+    }
+    
 }

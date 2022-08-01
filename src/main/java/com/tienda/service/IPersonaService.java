@@ -19,5 +19,6 @@ public interface IPersonaService {
     //Estos son voids porque no devuelven información
     public void savePersona(Persona persona); //Con este insertamos una nueva fila en nuestra tabla personas
     public void delete (long id); //Aquí eliminamos una fila de nuestra BD de acuerdo al ID indicado
+    public Persona findByNombre (String nombre); //Agregamos la función que incluímos en el PersonaRepository
     
 }
