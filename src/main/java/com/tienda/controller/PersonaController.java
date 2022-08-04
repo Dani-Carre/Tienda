@@ -70,5 +70,7 @@ public class PersonaController {
         personaService.delete(idPersona);
         return "redirect:/persona";
     }
+    
+    //Pruebas para el JASPER REPORT
         
 }
